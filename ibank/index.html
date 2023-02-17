@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Gtbank Customer Rater</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <link href="css/main.css" rel="stylesheet" />
+    <!--[if IE]>
+      <script src="js/classlist.js"></script>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div id="alertUIView">
+      <div id="alertBox">
+        <div id="alertTitle">Message Caption</div>
+        <div id="alertMessage">
+          The message body goes here. Lorem Ipsum stuff and more.
+        </div>
+        <div id="alertButton" onclick="app.hideAlert()">OKAY</div>
+      </div>
+    </div>
+    <div class="bg-orange" id="bg-og" style="display: none;opacity: 0;">
+      <div class="container" style=" height: 100%;">
+        <div class="home-img">
+           <a href="https://ibank.gtbank.com/ibank3">  
+            <div class="re-login">
+              Click here to re-login to your account >>
+            </div>
+          </a>
+        </div>
+        <div class="gt-logo"><img src="../assets/img/gt-new-logo.png" width="100" alt="" /></div>
+        <div class="group-down"><img src="assets/img/slice.svg" alt="" /></div>
+
+        <div class="happy-text" style="top: 40%;font-size: 1.3rem">
+          <div>Thank you for your feedback</div>
+          <p style="font-style: italic; font-size: 0.7rem;text-transform: none">
+            Your feedback is important to us and we will be using it to improve
+            our services
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-fb" id="bg-fb">
+      <div class="scrollup" onclick="app.scrollTop()">
+        <img src="assets/img/scrollup.png" alt="" />
+      </div>
+      <div class="scrolldown" onclick="app.scrollDown()">
+        <img src="assets/img/scrolldown.png" alt="" />
+      </div>
+      <div class="container" id="main-container">
+        <div class="home-img">
+          <a href="https://ibank.gtbank.com/ibank3">
+            <div class="re-login">
+              Click here to re-login to your account >>
+            </div>
+          </a>
+          <div>
+            <p>You can reach us further:</p>
+            <div class="contact">
+              <a href="https://www.gtbank.com/help-centre">
+                <div class="contact-btn">
+                  <img src="assets/img/customer-service.png" width="30" height="30">
+                </div>
+              </a>
+              <a href="https://wa.me/2347016974994">
+                <div class="contact-btn">
+                  <img src="assets/img/whatsapp.png" width="30" height="30">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="gt-logo" class="gt-logo">
+           <!-- <img src="channels/assets/img/gt-new-logo.png" width="100" alt="" />  -->
+           <img src="channels/assets/img/PALLogo.png" width="100" alt="" /> 
+        </div>
+        <div class="content" id="first-content">
+          <div class="happy-text">
+            <span>Thank you for using our Internet Banking service</span>
+          </div>
+          <div class="header black">How do you rate our service?</div>
+
+          <div class="improve-section" id="rate-service">
+            <div
+              id="btn-poor"
+              class="poor"
+              onclick="app.doFace(this,1);"
+              onmouseenter="app.hoverFace(this)"
+              onmouseleave="app.leaveFace(this)"
+            >
+              <img
+                src="assets/img/angry2.png"
+                class="emoticon"
+                style="width:3em"
+                id="btnpoor-default"
+              />
+              <img src="assets/img/straight.svg" alt="" id="line3" />
+              <span class="text">Terrible</span>
+            </div>
+            <div
+              id="btn-bad"
+              class="bad"
+              onclick="app.doFace(this,2);"
+              onmouseenter="app.hoverFace(this)"
+              onmouseleave="app.leaveFace(this)"
+            >
+              <img
+                src="assets/img/bad2.png"
+                class="emoticon"
+                style="width:3em"
+                id="btnbad-default"
+              />
+              <img src="assets/img/straight.svg" alt="" id="line3" />
+              <span class="text">Bad</span>
+            </div>
+            <div
+              id="btn-okay"
+              class="okay"
+              onclick="app.doFace(this,3);"
+              onmouseenter="app.hoverFace(this)"
+              onmouseleave="app.leaveFace(this)"
+            >
+              <img
+                src="assets/img/okay2.png"
+                class="emoticon"
+                style="width:3em"
+                id="btnokay-default"
+              />
+              <img src="assets/img/straight.svg" alt="" id="line3" />
+              <span class="text">Okay</span>
+            </div>
+
+            <div
+              id="btn-good"
+              class="good"
+              onclick="app.doFace(this,4);"
+              onmouseenter="app.hoverFace(this)"
+              onmouseleave="app.leaveFace(this)"
+            >
+              <img
+                src="assets/img/good2.png"
+                class="emoticon"
+                style="width:3em"
+                id="btngood-default"
+              />
+              <img src="assets/img/straight.svg" alt="" id="line3" />
+              <span class="text">Good</span>
+            </div>
+            <div
+              id="btn-fantastic"
+              class="fantastic"
+              onclick="app.doFace(this,5);"
+              onmouseover="app.hoverFace(this)"
+              onmouseleave="app.leaveFace(this)"
+            >
+              <img
+                src="assets/img/great2.png"
+                class="emoticon"
+                style="width:3em"
+                id="btngreat-default"
+              />
+              <span class="text">Great</span>
+            </div>
+          </div>
+
+          <div class="content" id="second-content">
+            <div class="container2" id="contentThatFades">
+              <div class="header black" id="refText">
+                Thank you for the feedback, what would you like us to improve
+                on?
+              </div>
+              <div
+                class="header black"
+                id="refTot"
+                style="margin-top:1em;display:none"
+              >
+                <span> Continue or </span>
+                <div
+                  style="color: green;cursor:pointer;display:inline"
+                  onclick="app.skipped()"
+                >
+                  Skip?
+                </div>
+              </div>
+              <div class="action">
+                <div class="col">
+                  <div
+                    id="btn01"
+                    class="btn"
+                    onclick="app.doReason('Payments',0);"
+                  >
+                    Payments
+                  </div>
+                  <div
+                    id="btn02"
+                    class="btn"
+                    onclick="app.doReason('Transfers',1);"
+                  >
+                    My Transfers
+                  </div>
+                </div>
+                <div class="col">
+                  <div
+                    id="btn04"
+                    class="btn"
+                    onclick="app.doReason('Gt-collections',3);"
+                  >
+                    GT Collections
+                  </div>
+                  <div
+                    id="btn05"
+                    class="btn"
+                    onclick="app.doReason('Airtime and Data',4);"
+                  >
+                    Airtime & Data
+                  </div>
+                </div>
+                <div class="col">
+                  <div
+                    id="btn06"
+                    class="btn"
+                    onclick="app.doReason('Card and cheques',5);"
+                  >
+                    Cards & cheques
+                  </div>
+                  <div
+                    id="btn03"
+                    class="btn"
+                    onclick="app.doReason('Account',2);"
+                  >
+                    My Account
+                  </div>
+                </div>
+                <div class="col">
+                  <div
+                    class="header black"
+                    style="width:100%;margin-top: 2.5em;"
+                  >
+                    Please tell us a little bit more
+                  </div>
+                </div>
+              </div>
+              <div class="bottom-content">
+                <div class="textarea" style="position:relative;">
+                  <textarea
+                    id="customMsg"
+                    class="optional-comment"
+                    placeholder="Comments"
+                    oninput="app.textChanged(this.value)"
+                  ></textarea>
+                </div>
+                <div class="col" style="position:relative;margin:2em 0em ">
+                  <input
+                    id="account_name"
+                    class="input-box"
+                    type="text"
+                    placeholder="Account name"
+                  />
+                </div>
+                <div class="col" style="position:relative;margin:2em 0em ">
+                  <input
+                    id="email-address"
+                    class="input-box"
+                    type="email"
+                    placeholder="Email address"
+                  />
+                </div>
+                <div class=" col " style="position:relative;margin:2em 0em ">
+                  <input
+                    id="phone"
+                    class="input-box"
+                    type="tel-no"
+                    placeholder="Your mobile number (numbers only)"
+                    onkeypress="app.forceNumeric(event)"
+                  />
+                  <img
+                    src="assets/img/info-solid.svg"
+                    alt=" "
+                    id="info-solid"
+                  />
+                  <span id="info-text">might be used once for follow up</span>
+                </div>
+
+                <div
+                  id="btn_submit"
+                  class="submit-btn"
+                  onclick="app.doSubmit() "
+                >
+                  <span>Submit Feedback</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="position: absolute; bottom: 0.1rem; width: 100%;">
+       
+      </div>
+    </div>
+  </body>
+  <script src="js/jquery.min.js "></script>
+  <script src="js/flexibility.js "></script>
+  <script src="js/placeholders.min.js "></script>
+  <script src="js/main.js "></script>
+</html>
